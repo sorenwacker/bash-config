@@ -42,13 +42,7 @@ else
     alias vi='vim'
 fi 
 
-#vte file
-if [ -f $SYSTEM/dotfiles/vte.sh ] ; then
-       source $SYSTEM/config/vte.sh
-fi
-
 # Write commands to .localhistory files
-source $SYSTEM/config/vte.sh
 export PROMPT_COMMAND='__vte_prompt_command;hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> .localhistory'
 
 
