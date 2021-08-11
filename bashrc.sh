@@ -30,9 +30,8 @@ alias pdf2png='convert -density 300x300 -resize 1000x1000 '
 alias ps2pdf='ps2pdf -dEPSCrop'
 alias eps2pdf='for i in `ls *eps`;do ps2pdf -dESPCrop $i;done'
 alias joinpdf='gs  -dPDFFitPage -dFIXEDMEDIA -sPAPERSIZE=a4 -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=joined.pdf'
-alias in='jupyter notebook'
+alias jlab='nohup jupyter-lab --no-browser>> /dev/null'
 alias ca='conda activate'
-alias lab='jupyter-lab --no-browser'
 
 if [ -f /usr/bin/vimx ];then 
     alias vi='vimx'
@@ -67,7 +66,6 @@ HISTFILESIZE=100000
 export HISTIGNORE="ll:ls:la:cd*:[bf]g*:exit"
 export HISTCONTROL=erasedups
 # export HISTCONTROL=ignoredups
-
 
 # history with comments:
 # export PROMPT_COMMAND='hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; if [[ ${hpwd%% *} == "cd" ]]; then cwd=$OLDPWD; else cwd=$PWD; fi; hpwd="${hpwd% ### *} ### $cwd"; history -s "$hpwd"'
@@ -104,7 +102,6 @@ wo() {
 
 eq() { 
 	gawk 'BEGIN {print '"$*"'}' < /dev/null; 
-
 }
 
 
