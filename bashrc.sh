@@ -153,4 +153,15 @@ if [ "`pwd`" == "/mnt/c/WINDOWS/system32" ]; then
 fi
 
 
+## For WSL users
+
+_beep () {
+  for i in seq 3 ; do
+    powershell.exe "[console]::beep($1,$2)"
+  done
+}
+
+alias  beep="_beep 500 80"  # Quick yet noticeable beeps
+alias  beeep="_beep 1000 200"  # Longer beeps
+
 
