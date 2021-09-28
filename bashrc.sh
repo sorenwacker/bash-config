@@ -36,7 +36,7 @@ alias ca='conda activate'
 alias docker-stop-all='sudo docker stop $(sudo docker ps -a -q)'
 alias docker-rm-all='sudo docker rm $(sudo docker ps -a -q)'
 alias docker-ls='sudo docker container ls'
-
+alias docker-prune='sudo docker rm $(sudo docker images -q) -f && sudo docker system prune -f'
 
 if [ -f /usr/bin/vimx ];then 
     alias vi='vimx'
