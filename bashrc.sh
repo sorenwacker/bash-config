@@ -33,9 +33,9 @@ alias joinpdf='gs  -dPDFFitPage -dFIXEDMEDIA -sPAPERSIZE=a4 -dBATCH -dNOPAUSE -q
 alias jlab='nohup jupyter-lab --no-browser>> /dev/null'
 alias ca='conda activate'
 
-docker-stop-all='sudo docker stop $(sudo docker ps -a -q)'
-docker-rm-all='sudo docker rm $(sudo docker ps -a -q)'
-docker-ls='sudo docker container ls'
+alias docker-stop-all='sudo docker stop $(sudo docker ps -a -q)'
+alias docker-rm-all='sudo docker rm $(sudo docker ps -a -q)'
+alias docker-ls='sudo docker container ls'
 
 
 if [ -f /usr/bin/vimx ];then 
