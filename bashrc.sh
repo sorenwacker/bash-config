@@ -153,7 +153,7 @@ function apt-history(){
 }
 
 
-if [ "`pwd`" == "/mnt/c/WINDOWS/system32" ]; then
+if [ `pwd` == "/mnt/c/Windows/System32" ]; then
     cd ~
 fi
 
@@ -169,4 +169,15 @@ _beep () {
 alias  beep="_beep 500 80"  # Quick yet noticeable beeps
 alias  beeep="_beep 1000 200"  # Longer beeps
 
+alias install_miniconda='wget \
+    https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    && bash Miniconda3-latest-Linux-x86_64.sh -b \
+    && rm -f Miniconda3-latest-Linux-x86_64.sh \
+    && eval "$(/home/$USER/miniconda3/bin/conda shell.bash  hook)"\
+    && conda init'
+    
+alias mamba_create_py3='mamba create -y -n py3 -c plotly -c conda-forge jupyterlab \
+    tqdm pycaret scikit-learn seaborn pandas tqdm openpyxl xlsxwriter plotly beautifulsoup4 pandas \
+    python-wget black pytest pytest-cov' 
+    
 
