@@ -4,7 +4,7 @@ path=`pwd`
 
 echo "source ${path}/vte.sh"    >> ~/.bashrc
 echo "source ${path}/bashrc.sh" >> ~/.bashrc
-echo "export PATH=\$PATH/${path}/scripts" >> ~/.bashrc
+echo "export PATH=\$PATH:${path}/scripts" >> ~/.bashrc
 
 source ~/.bashrc
 
