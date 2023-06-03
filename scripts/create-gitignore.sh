@@ -1,4 +1,6 @@
 echo """
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 .localhistory
 .ipynb_checkpoints
 .*.ipynb
@@ -15,9 +17,6 @@ htmlcov
 Untitled*.ipynb
 nohup.out 
 .env
-
-
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
