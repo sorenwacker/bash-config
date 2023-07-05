@@ -38,6 +38,8 @@ alias docker-rm-all='sudo docker rm $(sudo docker ps -a -q)'
 alias docker-ls='sudo docker container ls'
 alias docker-prune='sudo docker rm $(sudo docker images -q) -f && sudo docker system prune -f'
 
+alias set-ssh-permissions='chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys && chmod 600 ~/.ssh/id_rsa && chmod 644 ~/.ssh/id_rsa.pub'
+
 if [ -f /usr/bin/vimx ];then 
     alias vi='vimx'
 else
