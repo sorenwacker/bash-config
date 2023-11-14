@@ -47,7 +47,11 @@ else
 fi 
 
 # Write commands to .localhistory files
-export PROMPT_COMMAND='__vte_prompt_command;hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> .localhistory'
+if declare -F __vte_prompt_command >/dev/null 2>&1; then
+    export PROMPT_COMMAND='__vte_prompt_command; hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> ~/.localhistory'
+else
+    export PROMPT_COMMAND='hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> ~/.localhistory'
+fi
 
 
 
