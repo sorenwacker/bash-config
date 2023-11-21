@@ -186,4 +186,7 @@ alias mamba_create_py3='mamba create -y -n py3 -c plotly -c conda-forge jupyterl
     tqdm pycaret scikit-learn seaborn pandas tqdm openpyxl xlsxwriter plotly beautifulsoup4 pandas \
     python-wget black pytest pytest-cov' 
     
-
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\eOA": history-search-backward'
+bind '"\eOB": history-search-forward'
