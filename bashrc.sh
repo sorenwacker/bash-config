@@ -49,7 +49,11 @@ fi
 
 
 # Write commands to .localhistory files
-export PROMPT_COMMAND='__vte_prompt_command;hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> .localhistory'
+if declare -F __vte_prompt_command >/dev/null 2>&1; then
+    export PROMPT_COMMAND='__vte_prompt_command; hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> ~/.localhistory'
+else
+    export PROMPT_COMMAND='hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> ~/.localhistory'
+fi
 
 
 
@@ -185,7 +189,6 @@ alias create_py3='conda create -y -n py3 -c plotly -c conda-forge jupyterlab \
     tqdm pycaret scikit-learn seaborn pandas tqdm openpyxl xlsxwriter plotly beautifulsoup4 pandas \
     python-wget black pytest pytest-cov' 
     
-
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 bind '"\eOA": history-search-backward'

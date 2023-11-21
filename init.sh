@@ -8,8 +8,11 @@ echo "export PATH=\$PATH:${path}/scripts" >> ~/.bashrc
 
 source ~/.bashrc
 
-echo set bell-style none >> /home/$USER/.inputrc
-echo '"\e[5~": history-search-backward' >> /home/$USER/.inputrc
-echo '"\e[6~": history-search-forward'  >> /home/$USER/.inputrc
+touch ~/.inputrc
+echo set bell-style none >> ~/.inputrc
+echo '"\e[5~": history-search-backward' >> ~/.inputrc
+echo '"\e[6~": history-search-forward'  >> ~/.inputrc
 
+touch ~/.vimrc
 cat vimrc >> ~/.vimrc
+
