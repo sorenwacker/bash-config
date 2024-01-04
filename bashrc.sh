@@ -46,6 +46,8 @@ else
     alias vi='vim'
 fi 
 
+
+
 # Write commands to .localhistory files
 if declare -F __vte_prompt_command >/dev/null 2>&1; then
     export PROMPT_COMMAND='__vte_prompt_command; hpwd=$(history 1); hpwd="${hpwd# *[0-9]*  }"; printf "$hpwd\n" >> ~/.localhistory'
@@ -61,7 +63,7 @@ export PATH=$PATH:$SYSTEM/scripts
 
 
 ## Shellstyle
-PS1='\[\033[02;0m\]\u@\h:\[\033[03;92m\]\w>\[\033[00m\]'
+#PS1='\[\033[02;0m\]\u@\h:\[\033[03;92m\]\w>\[\033[00m\]'
 
 
 ## ls style
@@ -165,7 +167,6 @@ fi
 
 
 ## For WSL users
-
 _beep () {
   for i in seq 3 ; do
     powershell.exe "[console]::beep($1,$2)"
@@ -175,6 +176,8 @@ _beep () {
 alias  beep="_beep 500 80"  # Quick yet noticeable beeps
 alias  beeep="_beep 1000 200"  # Longer beeps
 
+
+
 alias install_miniconda='wget \
     https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     && bash Miniconda3-latest-Linux-x86_64.sh -b \
@@ -182,8 +185,14 @@ alias install_miniconda='wget \
     && eval "$(/home/$USER/miniconda3/bin/conda shell.bash  hook)"\
     && conda init'
     
-alias mamba_create_py3='mamba create -y -n py3 -c plotly -c conda-forge jupyterlab \
+alias create_py3='conda create -y -n py3 -c plotly -c conda-forge jupyterlab \
     tqdm pycaret scikit-learn seaborn pandas tqdm openpyxl xlsxwriter plotly beautifulsoup4 pandas \
     python-wget black pytest pytest-cov' 
     
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\eOA": history-search-backward'
+bind '"\eOB": history-search-forward'
+bind '"^E" end-of-line'
+bind '"^A" start-of-line'
 
