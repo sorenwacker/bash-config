@@ -57,7 +57,7 @@ export PATH=$PATH:$SYSTEM/scripts
 
 
 ## Shellstyle
-PS1='\[\033[02;0m\]\u@\h:\[\033[03;92m\]\w>\[\033[00m\]'
+export PS1='\[\033[01;94m\]\u@\h:\[\033[01;92m\]\w\[\033[00m\]\$ '
 
 
 ## ls style
@@ -182,4 +182,9 @@ alias mamba_create_py3='mamba create -y -n py3 -c plotly -c conda-forge jupyterl
     tqdm pycaret scikit-learn seaborn pandas tqdm openpyxl xlsxwriter plotly beautifulsoup4 pandas \
     python-wget black pytest pytest-cov' 
     
+# Option+Up to search history backward
+bindkey '^[[A' history-beginning-search-backward
+
+# Option+Down to search history forward
+bindkey '^[[B' history-beginning-search-backward
 
