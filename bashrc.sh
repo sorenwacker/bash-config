@@ -63,7 +63,7 @@ export PATH=$PATH:$SYSTEM/scripts
 
 
 ## Shellstyle
-#PS1='\[\033[02;0m\]\u@\h:\[\033[03;92m\]\w>\[\033[00m\]'
+PS1='\[\033[02;0m\]\u@\h:\[\033[03;92m\]\w>\[\033[00m\]'
 
 
 ## ls style
