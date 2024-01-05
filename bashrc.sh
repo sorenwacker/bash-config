@@ -17,7 +17,7 @@ shopt -s checkwinsize
 alias ll='ls -alF'
 alias la='ls -A'
 alias ls='ls --color=auto'
-alias l='ls -rtlh --full-time'
+alias l='ls -rtlh --full-time --color=auto'
 alias md='mkdir'
 alias ..='cd ..'
 alias ...='cd ../..'
