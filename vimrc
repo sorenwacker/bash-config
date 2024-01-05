@@ -8,7 +8,7 @@ set shiftwidth=4
 set expandtab
 
 set belloff=all
-:color desert
+:color default
 
 autocmd FileType yaml setlocal ai ts=2 sw=2 et
 
