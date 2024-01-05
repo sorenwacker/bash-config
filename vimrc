@@ -11,3 +11,8 @@ set belloff=all
 :color desert
 
 autocmd FileType yaml setlocal ai ts=2 sw=2 et
+
+syntax on         " Turn on syntax highlighting
+set background=dark  " Use a dark background
+colorscheme elflord  " Use the default colorscheme, you can change it to others like 'elflord', 'desert', etc.
+
