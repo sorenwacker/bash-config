@@ -39,6 +39,7 @@ dependencies:
   - nltk
   - opencv
   - tensorflow
+  - datasets
   - pip:
       - annoy
       - tensorflow-io
