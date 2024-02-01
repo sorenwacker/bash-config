@@ -1,0 +1,51 @@
+name: ds
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - fastai
+  - pycaret
+  - ipykernel
+  - pyarrow
+  - pytables
+  - dask
+  - lightgbm
+  - pytorch
+  - lightning
+  - torchvision
+  - torchaudio
+  - spacy
+  - matplotlib<3.8.0
+  - seaborn
+  - scikit-learn
+  - pandas
+  - jupyter
+  - cartopy
+  - imagemagick
+  - pyproj
+  - shapely
+  - mamba
+  - h5py
+  - biopython
+  - scipy
+  - pillow
+  - xgboost
+  - gensim
+  - textblob
+  - wordcloud
+  - nltk
+  - opencv
+  - tensorflow
+  - pip:
+      - annoy
+      - tensorflow-io
+      - keras-nlp
+      - tensorflow-hub
+      - tensorflowjs
+      - h2o
+      - pydegensac
+      # Add more pip packages as needed
+
