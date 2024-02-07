@@ -39,6 +39,7 @@ dependencies:
   - nltk
   - opencv
   - tensorflow
+  - cudatoolkit
   - pip:
       - annoy
       - tensorflow-io
