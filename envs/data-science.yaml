@@ -9,6 +9,7 @@ dependencies:
   - fastai
   - pycaret
   - ipykernel
+  - ipywidgets
   - pyarrow
   - pytables
   - dask
