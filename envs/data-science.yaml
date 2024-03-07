@@ -18,6 +18,7 @@ dependencies:
   - lightning
   - torchvision
   - torchaudio
+  - accelerate
   - spacy
   - matplotlib<3.8.0
   - seaborn
@@ -29,6 +30,7 @@ dependencies:
   - pyproj
   - shapely
   - mamba
+  - onnx
   - h5py
   - biopython
   - scipy
