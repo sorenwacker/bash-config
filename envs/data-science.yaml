@@ -44,6 +44,7 @@ dependencies:
   - tensorflow
   - cudatoolkit
   - datasets
+  - wandb
   - pip:
       - annoy
       - tensorflow-io
