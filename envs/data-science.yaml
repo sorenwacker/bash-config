@@ -53,5 +53,6 @@ dependencies:
       - tensorflowjs
       - h2o
       - pydegensac
-      # Add more pip packages as needed
+      - transformers
+      - accelerate
 
