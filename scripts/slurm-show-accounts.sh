@@ -1,2 +1,2 @@
-sacctmgr list user $USER withassoc format='user%-20,account%-45,maxjobs,maxsubmit,maxwall,maxtresperjob%-40'
+sacctmgr show account format=Account%30,Organization%30,Description%60
 echo ""
